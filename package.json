@@ -1,0 +1,29 @@
+{
+  "name": "sparrow-cli",
+  "version": "1.0.0",
+  "description": "CLI for interacting with Sparrow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmdboi/sparrow-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "productivity",
+    "todo"
+  ],
+  "author": "Max Diamond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmdboi/sparrow-cli/issues"
+  },
+  "homepage": "https://github.com/dmdboi/sparrow-cli#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "fs-extra": "^11.2.0"
+  },
+  "bin": "index.js"
+}
