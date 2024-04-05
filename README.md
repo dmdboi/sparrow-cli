@@ -12,6 +12,8 @@ C:\Users\Default\.config\sparrow\config.json
 
 In this config file, add the API URL to your Cloudflare Workers API and the auth token you have set up.
 
+Install globally with ``npm i -g``
+
 ## Usage
 
 ```

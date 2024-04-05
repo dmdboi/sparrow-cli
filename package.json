@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "CLI for interacting with Sparrow",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +24,10 @@
   "homepage": "https://github.com/dmdboi/sparrow-cli#readme",
   "dependencies": {
     "axios": "^1.6.8",
+    "chalk": "^5.3.0",
     "fs-extra": "^11.2.0"
   },
-  "bin": "index.js"
+  "bin": {
+    "sparrow": "./index.js"
+  }
 }
