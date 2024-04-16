@@ -41,12 +41,13 @@ async function main() {
 
   if (command === "list") {
     const page = process.argv[3] || 0;
-    const limit = process.argv[4] || 10;
+    const limit = process.argv[4] || 6;
 
     const response = await api.get("/tasks", {
       params: {
         page,
         limit,
+        order: "DESC",
       },
     });
 
@@ -62,6 +63,26 @@ async function main() {
       });
     } else {
       console.log("Failed to fetch tasks.");
+    }
+  }
+
+  if (command === "stats") {
+    const tag = process.argv[3] || "";
+
+    const response = await api.get("/stats/");
+
+    if (response.status === 200) {
+      const { tags } = response.data;
+      console.log();
+      console.log(`${chalk.green("|------------------------|")}`);
+      console.log("          Stats         ");
+      console.log(`${chalk.green("|------------------------|")}`);
+      console.log();
+      tags.forEach(tag => {
+        console.log(`${chalk.green(`[${tag.tag}]`)} - ${tag.count} tasks`);
+      });
+    } else {
+      console.log("Failed to fetch stats.");
     }
   }
 }
